@@ -18,3 +18,7 @@ Route::get('/', function () {
 Route::get('/reference', function () {
     return view('reference');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
