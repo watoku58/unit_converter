@@ -9,9 +9,13 @@ window.onload = function () {
 };
 
 // Cボタンクリック時のイベント、変数を初期化
-function c_click(){
+function Clear(){
   result.value = "0";
   is_calc = false;
+}
+
+function Backspace(){
+  result.value = result.value.slice(0, -1);
 }
 
 // 数字ボタンクリック時のイベント
@@ -76,12 +80,13 @@ function is_ope_last(){
   return ["+","-","×","÷"].includes(result.value.toString().slice(-1));
 }
 
-function convert_click(calc){
+function convert_click(unit){
   // 計算式の最後が演算子の場合、演算子を取り除く
   if(is_ope_last())  result.value = result.value.slice(0, -1);
+  //console.log(unit);
 
   // 変数convに計算式の計算結果を設定
-  var conv = eval(result.value+calc);
+  var conv = eval(eval(result.value)+unit);
   // 計算結果がInfinity（無限大）かNaN（数字出ない）場合、resultにErrorを設定
   if(conv == Infinity || Number.isNaN(conv)){
     result.value = "Error";

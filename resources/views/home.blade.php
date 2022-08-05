@@ -13,7 +13,13 @@
       <div id="calc">
         <div>
           <input readonly id="result" type="text" value="0">
-          <button onclick="c_click()">C</button>
+        </div>
+        <div>
+          <button></button>
+          <button></button>
+          <button onclick="Backspace()" class="BS_button">BS</button>
+          <button onclick="Clear()" class="C_button">C</button>
+        </div>
         <div>
           <button onclick="num_click(this.innerHTML)">7</button>
           <button onclick="num_click(this.innerHTML)">8</button>
@@ -39,16 +45,16 @@
           <button onclick="ope_click(this.innerHTML)">+</button>
         </div>
         <div>
-          <button onclick="convert_click('*39.37')">m→in</button>
-          <button onclick="convert_click('*3.2808')">m→ft</button>
-          <button onclick="convert_click('*1.0936')">m→yd</button>
-          <button onclick="convert_click('*0.62137')">km→mi</button>
+          <button onclick="convert_click('*39.37')" class="conv_unit">ﾒｰﾄﾙ<span>→ｲﾝﾁ</span></button>
+          <button onclick="convert_click('*3.2808')" class="conv_unit">ﾒｰﾄﾙ<span>→ﾌｨｰﾄ</span></button>
+          <button onclick="convert_click('*1.0936')" class="conv_unit">ﾒｰﾄﾙ<span>→ﾔｰﾄﾞ</span></button>
+          <button onclick="convert_click('*0.62137')" class="conv_unit2">ｷﾛﾒｰﾄﾙ<span>→ﾏｲﾙ</span></button>
         </div>
         <div>
-          <button onclick="convert_click('*0.0254')">in→m</button>
-          <button onclick="convert_click('*0.3048')">ft→m</button>
-          <button onclick="convert_click('*0.9144')">yd→m</button>
-          <button onclick="convert_click('*1.609344')">mi→km</button>
+          <button onclick="convert_click('*0.0254')" class="conv_unit">ｲﾝﾁ<span>→ﾒｰﾄﾙ</span></button>
+          <button onclick="convert_click('*0.3048')" class="conv_unit">ﾌｨｰﾄ<span>→ﾒｰﾄﾙ</span></button>
+          <button onclick="convert_click('*0.9144')" class="conv_unit">ﾔｰﾄﾞ<span>→ﾒｰﾄﾙ</span></button>
+          <button onclick="convert_click('*1.609344')" class="conv_unit2">ﾏｲﾙ<span>→ｷﾛﾒｰﾄﾙ</span></button>
         </div>
       </div>
     </div>

@@ -6,6 +6,7 @@
   max-width: 350px;
   margin: 0 auto;
   color: #666;
+  font-family: 'arial';
 }
 
 #header,
@@ -27,7 +28,7 @@
 input {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  width: 75%;
+  width: 80%;
   height: 3.5rem;
   font-size: 1.6rem;
   text-align: right;
@@ -47,5 +48,35 @@ button {
 
 button:hover {
   background-color: #ddd;
+}
+
+.C_button {
+  color: white;
+  background-color: red;
+  font-weight: bold;
+}
+
+.BS_button {
+  color: white;
+  background-color: #333333;
+  font-weight: bold;
+}
+
+.conv_unit {
+  text-align: left;
+  padding-left: 15px;
+  white-space: pre-line;
+  word-wrap: normal;
+}
+
+.conv_unit2 {
+  font-size: 16px;
+  text-align: left;
+  white-space: pre-line;
+  word-wrap: normal;
+}
+
+span {
+  display: block;
 }
 
