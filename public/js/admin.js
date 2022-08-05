@@ -94,6 +94,8 @@ function convert_click(unit){
   // convの値をresultに設定し、計算済み（is_calc）フラグをtrueに
   else{
     result.value = conv;
+    //result.value += getElementById('inch');
+    //result.insertAdjacentHTML("afterend","インチ");
     is_calc = true;
   }
 }
