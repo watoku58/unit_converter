@@ -81,30 +81,28 @@ function is_ope_last(){
 }
 
 function convert_click(unit){
-  // 押したボタンの番号に応じて配列を取り出す
-  var suji = [
-    {unit:39.37, tani:"インチ"},
-    {unit:3.2808, tani:"フィート"},
-    {unit:1.0936, tani:"ヤード"},
-    {unit:0.62137, tani:"マイル"},
-    {unit:0.0254, tani:"メートル"},
-    {unit:0.3048, tani:"メートル"},
-    {unit:0.9144, tani:"メートル"},
-    {unit:1.609344, tani:"キロメートル"},
-  ];
-  //console.log(suji[unit].unit);
-  //console.log(suji[unit].tani);
+  const suji = {
+    39.37: "インチ",
+    3.2808: "フィート",
+    1.0936: "ヤード",
+    0.62137: "マイル",
+    0.0254: "メートル",
+    0.3048: "メートル",
+    0.9144: "メートル",
+    1.609344: "キロメートル",
+  };
+  console.log(suji[unit]);
+
   // 計算式の最後が演算子の場合、演算子を取り除く
   if(is_ope_last())  result.value = result.value.slice(0, -1);
   //console.log(unit);
 
-  // 先に表示上の計算を実行
-  //console.log("前");
+  // 変数convに計算式の計算結果を設定
+  console.log("前");
   var temp = eval(result.value.replaceAll("×", "*").replaceAll("÷", "/"));
-  // 計算結果から換算を実行
   console.log(temp);
-  var conv = temp*suji[unit].unit;
-  //console.log("後");
+  var conv = temp*unit;
+  console.log("後");
   // 計算結果がInfinity（無限大）かNaN（数字出ない）場合、resultにErrorを設定
   if(conv == Infinity || Number.isNaN(conv)){
     result.value = "Error";
@@ -112,7 +110,7 @@ function convert_click(unit){
   // convの値をresultに設定し、計算済み（is_calc）フラグをtrueに
   else{
     result.value = conv;
-    result.insertAdjacentHTML("afterend", suji[unit].tani);
+    result.insertAdjacentHTML("afterend", suji[unit]);
     is_calc = true;
   }
 }

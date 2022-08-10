@@ -3,7 +3,7 @@
 @section('title', 'UnitConverter')
 
 @section('myjs')
-<script src="{{ asset('/js/admin.js') }}"></script>
+<script src="{{ asset('/js/admin2.js') }}"></script>
 @endsection
 
 @section('content')
@@ -45,16 +45,16 @@
           <button onclick="ope_click(this.innerHTML)">+</button>
         </div>
         <div>
-          <button onclick="convert_click(0)" class="conv_unit">ﾒｰﾄﾙ<span>→ｲﾝﾁ</span></button>
-          <button onclick="convert_click(1)" class="conv_unit">ﾒｰﾄﾙ<span>→ﾌｨｰﾄ</span></button>
-          <button onclick="convert_click(2)" class="conv_unit">ﾒｰﾄﾙ<span>→ﾔｰﾄﾞ</span></button>
-          <button onclick="convert_click(3)" class="conv_unit2">ｷﾛﾒｰﾄﾙ<span>→ﾏｲﾙ</span></button>
+          <button onclick="convert_click(39.37)" class="conv_unit">ﾒｰﾄﾙ<span>→ｲﾝﾁ</span></button>
+          <button onclick="convert_click(3.2808)" class="conv_unit">ﾒｰﾄﾙ<span>→ﾌｨｰﾄ</span></button>
+          <button onclick="convert_click(1.0936)" class="conv_unit">ﾒｰﾄﾙ<span>→ﾔｰﾄﾞ</span></button>
+          <button onclick="convert_click(0.62137)" class="conv_unit2">ｷﾛﾒｰﾄﾙ<span>→ﾏｲﾙ</span></button>
         </div>
         <div>
-          <button onclick="convert_click(4)" class="conv_unit">ｲﾝﾁ<span>→ﾒｰﾄﾙ</span></button>
-          <button onclick="convert_click(5)" class="conv_unit">ﾌｨｰﾄ<span>→ﾒｰﾄﾙ</span></button>
-          <button onclick="convert_click(6)" class="conv_unit">ﾔｰﾄﾞ<span>→ﾒｰﾄﾙ</span></button>
-          <button onclick="convert_click(7)" class="conv_unit2">ﾏｲﾙ<span>→ｷﾛﾒｰﾄﾙ</span></button>
+          <button onclick="convert_click(0.0254)" class="conv_unit">ｲﾝﾁ<span>→ﾒｰﾄﾙ</span></button>
+          <button onclick="convert_click(0.3048)" class="conv_unit">ﾌｨｰﾄ<span>→ﾒｰﾄﾙ</span></button>
+          <button onclick="convert_click(0.9144)" class="conv_unit">ﾔｰﾄﾞ<span>→ﾒｰﾄﾙ</span></button>
+          <button onclick="convert_click(1.609344)" class="conv_unit2">ﾏｲﾙ<span>→ｷﾛﾒｰﾄﾙ</span></button>
         </div>
       </div>
     </div>
