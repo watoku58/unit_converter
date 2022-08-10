@@ -102,7 +102,7 @@ function convert_click(unit){
   //console.log("前");
   var temp = eval(result.value.replaceAll("×", "*").replaceAll("÷", "/"));
   // 計算結果から換算を実行
-  console.log(temp);
+  //console.log(temp);
   var conv = temp*suji[unit].unit;
   //console.log("後");
   // 計算結果がInfinity（無限大）かNaN（数字出ない）場合、resultにErrorを設定
