@@ -18,7 +18,7 @@
 /*テキスト*/
 input{
   box-sizing: border-box;
-  width: 80%;
+  width: 63%;
   height: 3.5rem;
   font-size: 1.6rem;
   text-align: right;
@@ -51,7 +51,7 @@ button:hover{
 
 .conv_unit{
   text-align: left;
-  padding-left: 15px;
+  padding-left: 8px;
   white-space: pre-line;
   word-wrap: normal;
 }
@@ -61,6 +61,12 @@ button:hover{
   text-align: left;
   white-space: pre-line;
   word-wrap: normal;
+}
+
+.display{
+  float: right;
+  padding-top: 16px;
+  width: 25%;
 }
 
 span{

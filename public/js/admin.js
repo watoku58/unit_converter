@@ -12,6 +12,9 @@ window.onload = function () {
 function Clear(){
   result.value = "0";
   is_calc = false;
+
+  let element = document.getElementById('unit');
+  element.innerHTML = "";
 }
 
 function Backspace(){
@@ -23,6 +26,8 @@ function num_click(val){
   // 1度”＝”で計算済みの場合、数字ボタンを押したらresultを初期化
   if(is_calc)  result.value = "0";
   is_calc = false;
+  let element = document.getElementById('unit');
+  element.innerHTML = "";
 
   // 初期化後、”0″が入力された場合、resultに”0″を設定
   if(result.value =="0" && val == "0"){
@@ -46,6 +51,8 @@ function num_click(val){
 function ope_click(val){
   // 1度”＝”で計算済みの場合、演算子ボタンを押したら計算を初期化
   if(is_calc)  is_calc = false;
+  let element = document.getElementById('unit');
+  element.innerHTML = "";
 
   // 直前のボタンが演算子の場合、演算子を切り替え
   if(is_ope_last()){
@@ -112,7 +119,9 @@ function convert_click(unit){
   // convの値をresultに設定し、計算済み（is_calc）フラグをtrueに
   else{
     result.value = conv;
-    result.insertAdjacentHTML("afterend", suji[unit].tani);
+    //result.insertAdjacentHTML("afterend", suji[unit].tani);
+    let element = document.getElementById('unit');
+    element.innerHTML = suji[unit].tani;
     is_calc = true;
   }
 }

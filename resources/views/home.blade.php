@@ -13,6 +13,7 @@
       <div id="calc">
         <div>
           <input readonly id="result" type="text" value="0">
+          <P id="unit" type="text" class="display"></P>
         </div>
         <div>
           <button></button>
